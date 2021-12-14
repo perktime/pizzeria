@@ -7,7 +7,10 @@ WORKDIR /home/pedrorod/pizzeria
 COPY . /home/pedrorod/pizzeria
 EXPOSE 8081
 ENTRYPOINT ["java","-jar","webapp/target/dependency/webapp-runner.jar","--port","8081","--path","pizzeria","webapp/target/webapp-0.0.1-SNAPSHOT.war"]
-#ENTRYPOINT ["sleep","100000"]
+
+# This will compile and create the jar file 
+# mvn clean package -DskipTests
+
 # Command to build and push the new Docker image to the remote repository
 # docker build . -f Debugger-Dockerfile -t izzyacademy/ubuntu-pizza:18.04
 # docker push izzyacademy/ubuntu-pizza:18.04
