@@ -61,7 +61,8 @@ public class DataConfig {
                         "hibernate.dialect", environment.getProperty("hibernate.dialect"),
                         "hibernate.hbm2ddl.auto", environment.getProperty("hibernate.hbm2ddl.auto"),
                         "hibernate.hbm2ddl.import_files_sql_extractor", environment.getProperty("hibernate.hbm2ddl.import_files_sql_extractor"),
-                        "hibernate.hbm2ddl.import_files", environment.getProperty("hibernate.hbm2ddl.import_files")
+                        "hibernate.hbm2ddl.import_files", environment.getProperty("hibernate.hbm2ddl.import_files"),
+                        "hibernate.default_schema", environment.getProperty("hibernate.default_schema")
                 ));
         return factory;
     }
