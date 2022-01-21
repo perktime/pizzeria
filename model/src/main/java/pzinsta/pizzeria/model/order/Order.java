@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "tblOrders")
 public class Order implements Serializable {
     @Id
     @GeneratedValue(generator = Constants.ID_GENERATOR)
@@ -46,6 +46,7 @@ public class Order implements Serializable {
     @OneToOne(mappedBy = "order", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
 	private Delivery delivery;
 
+	@Column(name = "comment1")
     @Length(max = 1000)
     private String comment;
 
