@@ -1,0 +1,5 @@
+<hibernate-mapping>
+  <class="User" table="users">    
+    <property column="phoneNumber" name="phoneNumber" type = "nstring"/>
+  </class>
+</hibernate-mapping>
